@@ -22,3 +22,21 @@ function OneCase() {
 console.log('O(1) => ', OneCase());
 
 
+//==========================================
+
+function SquaredCase() {
+    const array = [5, 3, 2, 4, 6];
+    let result;
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            // 입력한 N * N(5 * 5)번 연산을하기 때문에 O(N^2)이 된다.
+            result = i * j;
+            // console.log(result);
+            count++;
+        }
+    }
+
+    return count;
+}
+console.log('O(N^2)', SquaredCase());
